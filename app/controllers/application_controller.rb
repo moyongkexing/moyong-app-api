@@ -1,6 +1,6 @@
-class ApplicationController < ActionController::API
-  skip_before_action :vertify_authenticity_token
-
+class ApplicationController < ActionController::Base
+  skip_before_action :verify_authenticity_token
+  
   helper_method :login!, :current_user
 
   def login!
